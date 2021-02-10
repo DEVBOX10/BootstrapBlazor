@@ -14,7 +14,8 @@ namespace BootstrapBlazor.DataAcces.EntityFrameworkCore
     /// <summary>
     /// Entity Framework ORM 的 IDataService 接口实现
     /// </summary>
-    internal class DefaultDataService<TModel> : DataServiceBase<TModel>, IEntityFrameworkCoreDataService where TModel : class, new()
+    internal class DefaultDataService<TModel> : DataServiceBase<TModel>, IEntityFrameworkCoreDataService
+        where TModel : class, new()
     {
         private readonly DbContext _db;
         private TModel? Model { get; set; }
